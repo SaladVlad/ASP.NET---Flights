@@ -1,93 +1,88 @@
-# Projekat
+# Airline Ticket Reservation System
 
+This project aims to develop a web application for an information system simulating an online airline ticket reservation system. The application is used by three groups (roles) of users: Unauthenticated User, Authenticated/Registered User, and System Administrator.
 
+The application handles the following entities:
 
-## Getting started
+**User:**
+- Username (unique)
+- Password
+- First Name
+- Last Name
+- Email
+- Date of Birth (stored in the format dd/MM/yyyy)
+- Gender
+- User Type (Passenger, Administrator)
+- List of reservations
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+**Airline:**
+- Name
+- Address
+- Contact Information
+- List of flights offered
+- List of reviews
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+**Flight:**
+- Airline
+- Departure Destination
+- Arrival Destination
+- Departure Date and Time
+- Arrival Date and Time
+- Number of available and occupied seats
+- Price
+- Status (Active, Canceled, Completed)
 
-## Add your files
+**Reservation:**
+- User
+- Flight
+- Number of passengers
+- Total price
+- Status (Created, Approved, Canceled, Completed)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+**Review:**
+- Reviewer (User who wrote the review)
+- Airline
+- Title
+- Content
+- Image (optional parameter)
+- Status (Created, Approved, Rejected)
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/web8744621/Projekat.git
-git branch -M main
-git push -uf origin main
-```
+## Functionality for Implementation
 
-## Integrate with your tools
+### Unauthenticated User
+- **Home Page**: Display a list of flights with the status ACTIVE. Additionally, display basic information about each flight and the corresponding airline, allowing the user to navigate to a page displaying basic information about the selected airline.
+- **Search**: Allow searching for ACTIVE flights by departure and arrival destinations, departure date, return date, and airline.
+- **Combined Search**: Enable combined search for ACTIVE flights by allowing users to input multiple search parameters and displaying results that meet all entered criteria.
+- **Flight Sorting**: Sort flights by ascending and descending price.
 
-- [ ] [Set up project integrations](https://gitlab.com/web8744621/Projekat/-/settings/integrations)
+### Authenticated/Registered User
+- **Home Page**: Same functionality as Unauthenticated User.
+- **User Profile Page**: Allow users to view and edit their profile information.
+- **Flight List**: In addition to viewing ACTIVE flights, users can view their canceled and completed flights. Allow filtering flights by status: ACTIVE, COMPLETED, CANCELED.
+- **Reservation List**: View all reservations made by the currently logged-in user. Allow filtering reservations by status: CREATED, APPROVED, CANCELED, COMPLETED.
+- **Flight Reservation**: Allow users to select an ACTIVE flight and enter the number of passengers. When creating a reservation, it receives the CREATED status and automatically updates the number of available/occupied seats on the flight.
 
-## Collaborate with your team
+### Administrator
+- **User Profile Page**: Same functionality as Authenticated/Registered User.
+- **User Management**: View a list of all system users. Allow searching users by name, surname, and date of birth (between two dates). Enable combined user search by entering multiple search parameters and displaying results that meet all entered criteria. Sort the user list by name (ascending and descending) and date of birth (ascending and descending).
+- **Airline Administration**: View all airlines in the system. Add a new airline with all necessary information. Search for airlines by name, address, and contact information. Edit existing airline information. Delete an airline (logical deletion). It is only possible to delete airlines that do not have flights with the ACTIVE status.
+- **Flight Management**: View all flights. Search for flights by departure destination, arrival destination, and departure date. Add new flights for a specific airline. When adding a flight, it receives the ACTIVE status, and all seats are initially free. Edit existing flight information. It is not possible to change the departure and arrival destinations of the flight or the price of flights that have reservations with the CREATED/APPROVED status. Delete flights (logical deletion). All deletions are logical and can only be performed on flights that do not have reservations with the CREATED/APPROVED status.
+- **Reservation Administration**: View all reservations in the system. Change the status of a reservation from CREATED to APPROVED or CANCELED. Reservations can be canceled up to 24 hours before the flight departure time. When changing the reservation status to CANCELED, the number of available/occupied seats on the flight is automatically updated.
+- **Review Approval**: When a Passenger creates a review for an airline, the Administrator can approve or reject it (change the status from CREATED to APPROVED or REJECTED). Approved reviews are automatically visible to everyone, while rejected reviews are visible only to the Administrator.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+## Technologies Used
+- Frontend: HTML, CSS, JavaScript (with Bootstrap for styling), JQuery
+- Backend: ASP.NET Web API 2, JQuery, REST API
+- Database: Local XML database
 
-## Test and Deploy
+## Setup Instructions
+1. Clone the repository to your local machine.
+2. Open the project in your preferred development environment.
+3. Build and run the project.
+4. Access the application through a web browser.
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## Contributors
+- [Vladislav Petković a.k.a. SaladVlad](https://github.com/SaladVlad)
 
 ## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This project is licensed under the [MIT License](LICENSE).
