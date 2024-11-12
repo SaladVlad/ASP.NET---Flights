@@ -72,7 +72,7 @@ The application handles the following entities:
 
 ## Technologies Used
 - Frontend: HTML, CSS, JavaScript (with Bootstrap for styling), JQuery
-- Backend: ASP.NET Web API 2, JQuery, REST API
+- Backend: ASP.NET Web API 2 (REST-ful API)
 - Database: Local XML database
 
 ## Setup Instructions
