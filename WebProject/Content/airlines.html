@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Airlines</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+    <!-- CSS for this page -->
+    <link href="/Styles/airlines.css" rel="stylesheet" />
+    <link href="/Styles/common.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div id="admin-controls" hidden>
+            <h2>Create Airline</h2>
+            <form id="create-airline-form">
+                <input type="hidden" id="airline-id">
+                <div class="form-group">
+                    <label for="airline-name">Name</label>
+                    <input type="text" class="form-control" id="airline-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="airline-address">Address</label>
+                    <input type="text" class="form-control" id="airline-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="airline-contact">Contact Info</label>
+                    <input type="text" class="form-control" id="airline-contact" required>
+                </div>
+                <div class="form-group d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary me-2">Create Airline</button>
+                    <button type="button" id="cancel-edit-button" class="btn btn-secondary" hidden>Cancel</button>
+                </div>            
+            </form>
+
+            <h2 style="margin:20pt 0 0 5pt">Filter Airlines</h2>
+            <form id="filter-form" class="mb-3">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="filter-name">Name</label>
+                        <input type="text" class="form-control" id="filter-name" placeholder="Airline Name">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="filter-address">Address</label>
+                        <input type="text" class="form-control" id="filter-address" placeholder="Address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="filter-contact">Contact Info</label>
+                        <input type="text" class="form-control" id="filter-contact" placeholder="Contact Info">
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button type="button" id="clear-filters-btn" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container content mt-5 pt-5">
+        <h1 class="text-center" style="margin:20pt">Airlines:</h1>
+        <div id="airline-list" class="row"></div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+
+    <script src="../PageScripts/common.js"></script>
+    <script src="../PageScripts/airlines.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<ArrayOfFlight xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Flight>
+    <Id>1</Id>
+    <AirlineId>1</AirlineId>
+    <AirlineName>The First Airline</AirlineName>
+    <Departure>JFK</Departure>
+    <Destination>LAX</Destination>
+    <DepartureTime>10.10.2024-10:00</DepartureTime>
+    <ArrivalTime>10.10.2024-13:00</ArrivalTime>
+    <Seats>0/10</Seats>
+    <Cost>300</Cost>
+    <FlightStatus>Active</FlightStatus>
+    <Deleted>false</Deleted>
+  </Flight>
+  <Flight>
+    <Id>2</Id>
+    <AirlineId>2</AirlineId>
+    <AirlineName>The Second Airline</AirlineName>
+    <Departure>SFO</Departure>
+    <Destination>ORD</Destination>
+    <DepartureTime>15.10.2024-13:00</DepartureTime>
+    <ArrivalTime>15.10.2024-16:00</ArrivalTime>
+    <Seats>45/5</Seats>
+    <Cost>200</Cost>
+    <FlightStatus>Active</FlightStatus>
+    <Deleted>false</Deleted>
+  </Flight>
+  <Flight>
+    <Id>3</Id>
+    <AirlineId>3</AirlineId>
+    <AirlineName>Airline C</AirlineName>
+    <Departure>MIA</Departure>
+    <Destination>ATL</Destination>
+    <DepartureTime>5.6.2024-16:00</DepartureTime>
+    <ArrivalTime>5.6.2024-19:00</ArrivalTime>
+    <Seats>84/16</Seats>
+    <Cost>250</Cost>
+    <FlightStatus>Finished</FlightStatus>
+    <Deleted>false</Deleted>
+  </Flight>
+  <Flight>
+    <Id>6</Id>
+    <AirlineId>1</AirlineId>
+    <AirlineName>The First Airline</AirlineName>
+    <Departure>New York</Departure>
+    <Destination>Los Angeles</Destination>
+    <DepartureTime>27.06.2024-23:09</DepartureTime>
+    <ArrivalTime>29.06.2024-23:09</ArrivalTime>
+    <Seats>5/10</Seats>
+    <Cost>200</Cost>
+    <FlightStatus>Cancelled</FlightStatus>
+    <Deleted>false</Deleted>
+  </Flight>
+  <Flight>
+    <Id>7</Id>
+    <AirlineId>2</AirlineId>
+    <AirlineName>The Second Airline</AirlineName>
+    <Departure>Toronto</Departure>
+    <Destination>Ottawa</Destination>
+    <DepartureTime>18.06.2024-14:38</DepartureTime>
+    <ArrivalTime>18.06.2024-20:00</ArrivalTime>
+    <Seats>10/0</Seats>
+    <Cost>130</Cost>
+    <FlightStatus>Active</FlightStatus>
+    <Deleted>true</Deleted>
+  </Flight>
+  <Flight>
+    <Id>8</Id>
+    <AirlineId>2</AirlineId>
+    <AirlineName>The Second Airline</AirlineName>
+    <Departure>Toronto</Departure>
+    <Destination>Ottawa</Destination>
+    <DepartureTime>28.06.2024-14:30</DepartureTime>
+    <ArrivalTime>28.06.2024-14:45</ArrivalTime>
+    <Seats>5/5</Seats>
+    <Cost>80</Cost>
+    <FlightStatus>Active</FlightStatus>
+    <Deleted>false</Deleted>
+  </Flight>
+</ArrayOfFlight>

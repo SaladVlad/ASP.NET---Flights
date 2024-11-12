@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/Styles/common.css" rel="stylesheet" />
+    <link href="/Styles/login.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <div class="row justify-content-center align-items-center">
+            <div class="col">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h2 class="text-center text-white">Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username" class="text-white">Username:</label>
+                                <input type="text" name="username" id="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-white">Password:</label>
+                                <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-danger text-center" id="message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+
+    <script src="../PageScripts/common.js"></script>
+    <script src="../PageScripts/login.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿.flight-active {
+    border: 2px solid green;
+    color: white;
+}
+
+.flight-cancelled {
+    border: 2px solid red;
+    color: white;
+}
+
+.flight-finished {
+    border: 2px solid blue;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+    a:hover {
+        color: turquoise
+    }

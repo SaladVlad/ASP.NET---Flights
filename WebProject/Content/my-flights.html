@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flights</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet" />
+    <!--page style-->
+    <link href="/Styles/common.css" rel="stylesheet" />
+    <link href="/Styles/my-flights.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content mt-5">
+        <h1 class="text-center">My Flights:</h1>
+
+        <form id="filter-form" class="mb-4">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="filter-status">Flight Status: </label>
+                    <select class="form-control" id="status">
+                        <option value="">Select Status</option>
+                        <option>Active</option>
+                        <option>Cancelled</option>
+                        <option>Finished</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12 text-left">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button id="clear-filter" type="button" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="flight-list" class="mt-4"></div>
+    </div>
+
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-primary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel" style="color: white">Leave a Review</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="review-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="headline" class="form-label" style="color: white">Headline</label>
+                            <input type="text" class="form-control" id="headline" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label" style="color: white">Content</label>
+                            <textarea class="form-control" id="content" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="review-file" class="form-label" style="color: white">Upload Picture</label>
+                            <input type="file" class="form-control" id="review-file">
+                        </div>
+                        <input type="hidden" id="review-airline-name">
+                        <input type="hidden" id="review-flight-id">
+                        <input type="hidden" id="review-airline-id">
+                        <button type="submit" class="btn btn-success">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+    <!--script for navbar-->
+    <script src="../PageScripts/my-flights.js"></script>
+    <script src="../PageScripts/common.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

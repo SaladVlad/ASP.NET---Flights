@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<ArrayOfAirline xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Airline>
+    <Id>1</Id>
+    <Name>The First Airline</Name>
+    <Address>123 Main St, New York, United States</Address>
+    <ContactInfo>contact@airlinea.com, +123456789</ContactInfo>
+    <Flights>
+      <Flight>
+        <Id>1</Id>
+        <AirlineId>1</AirlineId>
+        <AirlineName>The First Airline</AirlineName>
+        <Departure>JFK</Departure>
+        <Destination>LAX</Destination>
+        <DepartureTime>10.10.2024-10:00</DepartureTime>
+        <ArrivalTime>10.10.2024-13:00</ArrivalTime>
+        <Seats>0/10</Seats>
+        <Cost>300</Cost>
+        <FlightStatus>Active</FlightStatus>
+        <Deleted>false</Deleted>
+      </Flight>
+      <Flight>
+        <Id>6</Id>
+        <AirlineId>1</AirlineId>
+        <AirlineName>The First Airline</AirlineName>
+        <Departure>New York</Departure>
+        <Destination>Los Angeles</Destination>
+        <DepartureTime>27.06.2024-23:09</DepartureTime>
+        <ArrivalTime>29.06.2024-23:09</ArrivalTime>
+        <Seats>5/10</Seats>
+        <Cost>200</Cost>
+        <FlightStatus>Cancelled</FlightStatus>
+        <Deleted>false</Deleted>
+      </Flight>
+    </Flights>
+    <Reviews>
+      <Review>
+        <Id>1</Id>
+        <ReviewerUsername>John Doe</ReviewerUsername>
+        <AirlineId>1</AirlineId>
+        <AirlineName>The First Airline</AirlineName>
+        <Headline>Review 1</Headline>
+        <Content>This is a review for airline A.</Content>
+        <Status>Approved</Status>
+      </Review>
+    </Reviews>
+    <Deleted>false</Deleted>
+  </Airline>
+  <Airline>
+    <Id>2</Id>
+    <Name>The Second Airline</Name>
+    <Address>456 Elm St, City, Country</Address>
+    <ContactInfo>contact@airlineb.com, +987654321</ContactInfo>
+    <Flights>
+      <Flight>
+        <Id>2</Id>
+        <AirlineId>2</AirlineId>
+        <AirlineName>The Second Airline</AirlineName>
+        <Departure>SFO</Departure>
+        <Destination>ORD</Destination>
+        <DepartureTime>15.10.2024-13:00</DepartureTime>
+        <ArrivalTime>15.10.2024-16:00</ArrivalTime>
+        <Seats>45/5</Seats>
+        <Cost>200</Cost>
+        <FlightStatus>Active</FlightStatus>
+        <Deleted>false</Deleted>
+      </Flight>
+      <Flight>
+        <Id>7</Id>
+        <AirlineId>2</AirlineId>
+        <AirlineName>The Second Airline</AirlineName>
+        <Departure>Toronto</Departure>
+        <Destination>Ottawa</Destination>
+        <DepartureTime>18.06.2024-14:38</DepartureTime>
+        <ArrivalTime>18.06.2024-20:00</ArrivalTime>
+        <Seats>10/0</Seats>
+        <Cost>130</Cost>
+        <FlightStatus>Active</FlightStatus>
+        <Deleted>true</Deleted>
+      </Flight>
+      <Flight>
+        <Id>8</Id>
+        <AirlineId>2</AirlineId>
+        <AirlineName>The Second Airline</AirlineName>
+        <Departure>Toronto</Departure>
+        <Destination>Ottawa</Destination>
+        <DepartureTime>28.06.2024-14:30</DepartureTime>
+        <ArrivalTime>28.06.2024-14:45</ArrivalTime>
+        <Seats>5/5</Seats>
+        <Cost>80</Cost>
+        <FlightStatus>Finished</FlightStatus>
+        <Deleted>false</Deleted>
+      </Flight>
+    </Flights>
+    <Reviews>
+      <Review>
+        <Id>2</Id>
+        <ReviewerUsername>John Deere</ReviewerUsername>
+        <AirlineId>2</AirlineId>
+        <AirlineName>The Second Airline</AirlineName>
+        <Headline>Review 2</Headline>
+        <Content>This is a review for airline B.</Content>
+        <Status>Approved</Status>
+      </Review>
+      <Review>
+        <Id>3</Id>
+        <ReviewerUsername>user1234</ReviewerUsername>
+        <AirlineId>2</AirlineId>
+        <AirlineName>The Second Airline</AirlineName>
+        <Headline>This was a great flight!!</Headline>
+        <Content>It was very comfortable, 5 stars!</Content>
+        <Status>Approved</Status>
+        <UploadedFileName>seats.jpeg</UploadedFileName>
+        <UploadedFileUrl>/UploadedFiles/seats.jpeg</UploadedFileUrl>
+      </Review>
+    </Reviews>
+    <Deleted>false</Deleted>
+  </Airline>
+  <Airline>
+    <Id>3</Id>
+    <Name>Airline C</Name>
+    <Address>456 Elm St, City, Country</Address>
+    <ContactInfo>contact@airlinec.com, +987654321</ContactInfo>
+    <Flights>
+      <Flight>
+        <Id>3</Id>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Departure>MIA</Departure>
+        <Destination>ATL</Destination>
+        <DepartureTime>5.6.2024-16:00</DepartureTime>
+        <ArrivalTime>5.6.2024-19:00</ArrivalTime>
+        <Seats>16/4</Seats>
+        <Cost>250</Cost>
+        <FlightStatus>Finished</FlightStatus>
+        <Deleted>false</Deleted>
+      </Flight>
+    </Flights>
+    <Reviews>
+      <Review>
+        <Id>3</Id>
+        <ReviewerUsername>John Deere</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline B</AirlineName>
+        <Headline>Review 2</Headline>
+        <Content>This is a review for airline B.</Content>
+        <Status>Denied</Status>
+      </Review>
+      <Review>
+        <Id>4</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>A review was created</Headline>
+        <Content>This is some review that I wrote for the test. I love it.</Content>
+        <Status>Approved</Status>
+      </Review>
+      <Review>
+        <Id>5</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>This was a great flight!!</Headline>
+        <Content>I had so much fun and it was very comfortable, 10/10 :D</Content>
+        <Status>Approved</Status>
+      </Review>
+      <Review>
+        <Id>6</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>A review was created</Headline>
+        <Content>ok ok ok ok </Content>
+        <Status>Denied</Status>
+      </Review>
+      <Review>
+        <Id>7</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>Ovo je neki review</Headline>
+        <Content>Ovo je bilo jako uzasno 0/10 ne preporucujem</Content>
+        <Status>Denied</Status>
+      </Review>
+      <Review>
+        <Id>8</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>Ovo je neki review</Headline>
+        <Content>nesto nesto nesto</Content>
+        <Status>Denied</Status>
+      </Review>
+      <Review>
+        <Id>9</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>This was a great flight!!</Headline>
+        <Content>dffgdfg</Content>
+        <Status>Approved</Status>
+        <UploadedFileName>garden.jpg</UploadedFileName>
+        <UploadedFileUrl>/UploadedFiles/garden.jpg</UploadedFileUrl>
+      </Review>
+      <Review>
+        <Id>10</Id>
+        <ReviewerUsername>user1</ReviewerUsername>
+        <AirlineId>3</AirlineId>
+        <AirlineName>Airline C</AirlineName>
+        <Headline>This is a review</Headline>
+        <Content>sample review xoxo</Content>
+        <Status>Denied</Status>
+        <UploadedFileName>seats.jpeg</UploadedFileName>
+        <UploadedFileUrl>/UploadedFiles/seats.jpeg</UploadedFileUrl>
+      </Review>
+    </Reviews>
+    <Deleted>false</Deleted>
+  </Airline>
+  <Airline>
+    <Id>4</Id>
+    <Name>Airline E</Name>
+    <Address>Grove St. 19, Los Santos, US</Address>
+    <ContactInfo>contact@airlinea.com, +123456789</ContactInfo>
+    <Flights />
+    <Reviews />
+    <Deleted>true</Deleted>
+  </Airline>
+</ArrayOfAirline>

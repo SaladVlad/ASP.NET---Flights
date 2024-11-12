@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+
+    <!--jquery script for displaying flights and links-->
+    <script src="/PageScripts/index-home.js"></script>
+    <script src="/PageScripts/common.js"></script>
+
+    <!--custom CSS-->
+    <link href="/Styles/common.css" rel="stylesheet" />
+    <link href="../Styles/index.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 custom-bg mt-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 mb-3">In need of a plane ticket?</h1>
+                <p class="col-lg-10 fs-4">We have you covered.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5 d-none d-lg-block">
+                <img style="width:80%" src="../Content/img/ticket-red.png" alt="Air Ticket Png vectors by Lovepik.com" class="img-fluid smaller-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Available Flights</h1>
+
+        <div id="flight-filter" class="mt-4">
+            <form id="filter-form" class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <label for="departure" class="form-label">Departure</label>
+                    <input type="text" class="form-control" id="departure" name="departure">
+                </div>
+                <div class="col-md-2">
+                    <label for="destination" class="form-label">Destination</label>
+                    <input type="text" class="form-control" id="destination" name="destination">
+                </div>
+                <div class="col-md-2">
+                    <label for="departure-date-time-start" class="form-label">Departure Start</label>
+                    <input type="datetime-local" class="form-control" id="departure-date-time-start">
+                </div>
+                <div class="col-md-2">
+                    <label for="departure-date-time-end" class="form-label">Departure End</label>
+                    <input type="datetime-local" class="form-control" id="departure-date-time-end">
+                </div>
+                <div class="col-md-2">
+                    <label for="arrival-date-time-start" class="form-label">Arrival Start</label>
+                    <input type="datetime-local" class="form-control" id="arrival-date-time-start">
+                </div>
+                <div class="col-md-2">
+                    <label for="arrival-date-time-end" class="form-label">Arrival End</label>
+                    <input type="datetime-local" class="form-control" id="arrival-date-time-end">
+                </div>
+                <div class="col-md-2">
+                    <label for="airline" class="form-label">Airline</label>
+                    <input type="text" class="form-control" id="airline" name="airline">
+                </div>
+                <div class="col-md-2">
+                    <label for="sorting" class="form-label">Sort By</label>
+                    <select id="sorting" name="sorting" class="form-control">
+                        <option>Select</option>
+                        <option>Ascending</option>
+                        <option>Descending</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary me-2">Filter</button>
+                    <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="flight-list" class="mt-4"></div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+

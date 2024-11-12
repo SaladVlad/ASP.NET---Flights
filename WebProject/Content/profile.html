@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+
+    <!--custom CSS-->
+    <link href="/Styles/common.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div id="user-profile" class="mt-5">
+            <h1 class="mb-4">User Profile</h1>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control user-form-field" id="username" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control user-form-field" id="password" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control user-form-field" id="firstName" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control user-form-field" id="lastName" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control user-form-field" id="email" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control user-form-field" id="dateOfBirth" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control user-form-field" id="gender" disabled>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="button" id="edit-profile-btn" class="btn btn-primary">Edit Profile</button>
+
+                <div class="message"></div>
+            </form>
+        </div>
+
+
+        <div id="admin-section" style="display: none;">
+            <h2 class="text-center">Admin: User List</h2>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="text-center">User Management</h2>
+                <div>
+                    <button id="sort-name-asc" class="btn btn-primary">Sort by Name (A-Z)</button>
+                    <button id="sort-name-desc" class="btn btn-primary">Sort by Name (Z-A)</button>
+                    <button id="sort-dob-asc" class="btn btn-primary">Sort by DOB (Oldest First)</button>
+                    <button id="sort-dob-desc" class="btn btn-primary">Sort by DOB (Youngest First)</button>
+                    
+                </div>
+            </div>
+
+            <form id="filter-form" class="mb-4">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="filter-name">First Name</label>
+                        <input type="text" class="form-control" id="filter-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter-surname">Last Name</label>
+                        <input type="text" class="form-control" id="filter-surname" placeholder="Last Name">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter-start-date">Start Date</label>
+                        <input type="date" class="form-control" id="filter-start-date">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter-end-date">End Date</label>
+                        <input type="date" class="form-control" id="filter-end-date">
+                    </div>
+                    <div class="form-group col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                        <button id="clear-filters-btn" class="btn btn-secondary">Clear Filters</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="users-list" class="mt-4">
+                <!-- Users will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+
+    <!--script for all functionality-->
+    <script src="../../PageScripts/profile.js"></script>
+    <!--script for navbar-->
+    <script src="../PageScripts/common.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

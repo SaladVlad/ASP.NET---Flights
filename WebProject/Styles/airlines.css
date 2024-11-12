@@ -1,0 +1,46 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.airline-card {
+    display: flex;
+    margin: 0pt 10pt 0pt 10pt;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .airline-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .airline-card .card-header {
+        background-color: #007bff;
+        color: white;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+.review {
+    border-bottom: 1px solid #ddd;
+}
+
+.airline-card-body {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.airline-img {
+    width: 100%;
+    height: 100%;
+}

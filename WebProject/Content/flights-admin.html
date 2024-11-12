@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+    <!--navbar script-->
+    <script src="/PageScripts/common.js"></script>
+    <!--custom CSS-->
+    <link href="/Styles/common.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <h2 class="text-center">Add/Edit Flights</h2>
+        <form id="flight-form">
+            <div class="mb-3">
+                <label for="airlineName" class="form-label">Airline Name</label>
+                <select class="form-control" id="airlineName" name="airlineName">
+                    <option value="">Select Airline</option>
+                </select>
+            </div>
+            <input type="hidden" id="airlineId" hidden/>
+            <div class="mb-3">
+                <label for="departure" class="form-label">Departure</label>
+                <input type="text" class="form-control" id="departure" name="departure" required>
+            </div>
+            <div class="mb-3">
+                <label for="destination" class="form-label">Destination</label>
+                <input type="text" class="form-control" id="destination" name="destination" required>
+            </div>
+            <div class="mb-3">
+                <label for="departureTime" class="form-label">Departure Time</label>
+                <input type="datetime-local" class="form-control" id="departureTime" name="departureTime" required>
+            </div>
+            <div class="mb-3">
+                <label for="arrivalTime" class="form-label">Arrival Time</label>
+                <input type="datetime-local" class="form-control" id="arrivalTime" name="arrivalTime" required>
+            </div>
+            <div class="mb-3">
+                <label for="seats" class="form-label">Seats</label>
+                <input type="number" class="form-control" id="seats" name="seats" required>
+            </div>
+            <div class="mb-3">
+                <label for="cost" class="form-label">Cost</label>
+                <input type="number" class="form-control" id="cost" name="cost" required>
+            </div>
+            <input type="hidden" id="flightId" name="flightId">
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" id="clear-form">Clear</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Flight Listing:</h1>
+
+        <div id="flight-filter" class="mt-4">
+            <form id="filter-form" class="row g-3">
+                <div class="col-md-3">
+                    <label for="departure" class="form-label">Departure</label>
+                    <input type="text" class="form-control" id="departure" name="departure">
+                </div>
+                <div class="col-md-3">
+                    <label for="destination" class="form-label">Destination</label>
+                    <input type="text" class="form-control" id="destination" name="destination">
+                </div>
+                <div class="col-md-3">
+                    <label for="departure-date" class="form-label">Departure Date</label>
+                    <input type="date" class="form-control" id="departure-date" name="departureDate">
+                </div>
+                <div class="col-md-3">
+                    <label for="arrival-date" class="form-label">Arrival Date</label>
+                    <input type="date" class="form-control" id="arrival-date" name="arrivalDate">
+                </div>
+                <div class="col-md-3">
+                    <label for="airline" class="form-label">Airline</label>
+                    <input type="text" class="form-control" id="airline" name="airline">
+                </div>
+                <div class="col-md-3">
+                    <label for="sorting" class="form-label">Sort By:</label>
+                    <select id="sorting" name="sorting" class="form-control">
+                        <option>Ascending</option>
+                        <option>Descending</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary mt-4">Filter</button>
+                    <button type="button" class="btn btn-secondary mt-4" id="clear-filter">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="flight-list" class="mt-4"></div>
+    </div>
+
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+    <!--script for navbar-->
+    <script src="../PageScripts/flights-admin.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

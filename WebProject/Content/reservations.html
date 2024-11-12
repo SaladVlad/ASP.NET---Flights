@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation View</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+
+    <!--custom CSS-->
+    <link href="/Styles/common.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content mt-5">
+        <h1 class="text-center">Reservation view:</h1>
+        <form id="filter-form" class="mb-4">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="filter-status">Reservation Status: </label>
+                    <select class="form-control" id="status">
+                        <option value="">Select Status</option>
+                        <option>Created</option>
+                        <option>Approved</option>
+                        <option>Cancelled</option>
+                        <option>Finished</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12 text-left">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button id="clear-filter" type="button" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="reservation-list" class="mt-4"></div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p class="mb-0">&copy;2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+    <!--script for navbar-->
+    <script src="../PageScripts/common.js"></script>
+    <script src="../PageScripts/reservations.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

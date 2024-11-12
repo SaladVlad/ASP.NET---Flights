@@ -1,0 +1,59 @@
+﻿html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #DFF5FF;
+    display: flex;
+    padding: 70px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    flex: 1;
+}
+
+nav {
+    background: #5356FF
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #000;
+    text-decoration: none;
+    color: white;
+}
+.nav-link:hover{
+    color: turquoise;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+        .navbar-nav .nav-link {
+            display: block;
+            padding: 0.5rem;
+        }
+}
+
+.card {
+    background: #67C6E3;
+}
+
+.card-text{
+    color: white;
+}
+.card-title{
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+

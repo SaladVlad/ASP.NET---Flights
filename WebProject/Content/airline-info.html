@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="/Scripts/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../Styles/airline-info.css" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="primary-color navbar-brand text-white" href="index.html"><img style="width:30pt" src="img/ticket-red.png" />TicketBuy</a>
+            <div class="" id="navbarNav">
+                <ul class="navbar-nav ml-auto" id="dynamicNavbar"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 content">
+        <div class="card text-white">
+            <div class="card-header">
+                <h3 class="card-title" id="airline-name"></h3>
+            </div>
+            <div class="card-body">
+                <h4 class="card-text" id="airline-address"></h4>
+                <h4 class="card-text" id="airline-contact"></h4>
+                <h5>Flights:</h5>
+                <ul id="airline-flights">
+
+                </ul>
+
+            </div>
+            <div class="card-footer">
+                <div>
+                    <h5 class="mt-4">Reviews:</h5>
+                    <ul id="airline-reviews">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-4" onclick="goBack()">Back</button>
+    </div>
+
+    <footer class="footer text-center">
+        <p class="mb-0">&copy; 2024 Vladislav Petković. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="../../PageScripts/airline-info.js"></script>
+    <script src="../PageScripts/common.js"></script>
+    <link href="../Styles/common.css" rel="stylesheet" />
+</body>
+</html>
